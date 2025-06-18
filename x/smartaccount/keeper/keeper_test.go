@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	helper "github.com/annam-nw/annam/tests/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	helper "github.com/anam-nw/anam/tests/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )

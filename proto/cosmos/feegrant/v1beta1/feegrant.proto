@@ -9,7 +9,7 @@ import "cosmos/base/v1beta1/coin.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 
-option go_package = "github.com/annam-nw/annam/x/feegrant";
+option go_package = "github.com/anam-nw/anam/x/feegrant";
 
 // AllowedContractAllowance creates allowance only for specified contract address.
 message AllowedContractAllowance {

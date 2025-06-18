@@ -7,9 +7,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	helper "github.com/annam-nw/annam/tests/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount/keeper"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	helper "github.com/anam-nw/anam/tests/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount/keeper"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 )
 
 // ------------------------------ ActivateAccount ------------------------------
@@ -27,7 +27,7 @@ func TestActivateAccount(t *testing.T) {
 		},
 		{
 			// error msg
-			accountAddress: "annam1dkgyvk8zfn5vqg40qw0rhk972ugjppaeenqclwa6f0nsvzmx8mmsnggzpx", // not inactivate smartaccount address
+			accountAddress: "anam1dkgyvk8zfn5vqg40qw0rhk972ugjppaeenqclwa6f0nsvzmx8mmsnggzpx", // not inactivate smartaccount address
 			codeID:         1,
 			err:            true,
 		},
@@ -107,7 +107,7 @@ func TestRecoverAccount(t *testing.T) {
 		},
 		{
 			desc:           "error, smartaccount not activated",
-			accountAddress: "annam1dkgyvk8zfn5vqg40qw0rhk972ugjppaeenqclwa6f0nsvzmx8mmsnggzpx", // not activated smartaccount address
+			accountAddress: "anam1dkgyvk8zfn5vqg40qw0rhk972ugjppaeenqclwa6f0nsvzmx8mmsnggzpx", // not activated smartaccount address
 			err:            true,
 		},
 		{

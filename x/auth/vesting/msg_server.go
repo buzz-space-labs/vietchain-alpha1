@@ -6,7 +6,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 	"github.com/armon/go-metrics"
-	"github.com/annam-nw/annam/x/auth/vesting/types"
+	"github.com/anam-nw/anam/x/auth/vesting/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"

@@ -4,10 +4,10 @@ info:
   name: ''
   description: ''
 paths:
-  /annam/smartaccount/generate_account:
+  /anam/smartaccount/generate_account:
     get:
       summary: Queries a list of GenerateAccount items.
-      operationId: annamSmartaccountGenerateAccount
+      operationId: anamSmartaccountGenerateAccount
       responses:
         '200':
           description: A successful response.
@@ -284,10 +284,10 @@ paths:
           format: byte
       tags:
         - Query
-  /annam/smartaccount/params:
+  /anam/smartaccount/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: annamSmartaccountParams
+      operationId: anamSmartaccountParams
       responses:
         '200':
           description: A successful response.
@@ -43959,7 +43959,7 @@ definitions:
                   "@type": "type.googleapis.com/google.protobuf.Duration",
                   "value": "1.212s"
                 }
-  annam.smartaccount.CodeID:
+  anam.smartaccount.CodeID:
     type: object
     properties:
       code_id:
@@ -43969,14 +43969,14 @@ definitions:
       status:
         type: boolean
         title: status of code id
-  annam.smartaccount.MsgActivateAccountResponse:
+  anam.smartaccount.MsgActivateAccountResponse:
     type: object
     properties:
       address:
         type: string
-  annam.smartaccount.MsgRecoverResponse:
+  anam.smartaccount.MsgRecoverResponse:
     type: object
-  annam.smartaccount.Params:
+  anam.smartaccount.Params:
     type: object
     properties:
       whitelist_code_id:
@@ -44006,12 +44006,12 @@ definitions:
         format: uint64
         title: limit how much gas can be consumed by the `pre_execute` method
     description: Params defines the parameters for the module.
-  annam.smartaccount.QueryGenerateAccountResponse:
+  anam.smartaccount.QueryGenerateAccountResponse:
     type: object
     properties:
       address:
         type: string
-  annam.smartaccount.QueryParamsResponse:
+  anam.smartaccount.QueryParamsResponse:
     type: object
     properties:
       params:

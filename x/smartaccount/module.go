@@ -15,9 +15,9 @@ import (
 
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 
-	"github.com/annam-nw/annam/x/smartaccount/client/cli"
-	"github.com/annam-nw/annam/x/smartaccount/keeper"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/x/smartaccount/client/cli"
+	"github.com/anam-nw/anam/x/smartaccount/keeper"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"

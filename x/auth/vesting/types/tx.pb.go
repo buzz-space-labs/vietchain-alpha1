@@ -188,7 +188,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type MsgExtendClient interface {
-	// annam move from cosmos-sdk 0.46
+	// anam move from cosmos-sdk 0.46
 	CreatePeriodicVestingAccount(ctx context.Context, in *MsgCreatePeriodicVestingAccount, opts ...grpc.CallOption) (*MsgCreatePeriodicVestingAccountResponse, error)
 }
 
@@ -211,7 +211,7 @@ func (c *msgExtendClient) CreatePeriodicVestingAccount(ctx context.Context, in *
 
 // MsgExtendServer is the server API for MsgExtend service.
 type MsgExtendServer interface {
-	// annam move from cosmos-sdk 0.46
+	// anam move from cosmos-sdk 0.46
 	CreatePeriodicVestingAccount(context.Context, *MsgCreatePeriodicVestingAccount) (*MsgCreatePeriodicVestingAccountResponse, error)
 }
 

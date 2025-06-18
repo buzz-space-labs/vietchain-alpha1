@@ -1,8 +1,8 @@
 package smartaccount
 
 import (
-	"github.com/annam-nw/annam/x/smartaccount/keeper"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/x/smartaccount/keeper"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

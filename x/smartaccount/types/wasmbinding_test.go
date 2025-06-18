@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/stretchr/testify/require"

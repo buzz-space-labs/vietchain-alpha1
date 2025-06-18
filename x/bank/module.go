@@ -2,7 +2,7 @@ package bank
 
 import (
 	"fmt"
-	custombank "github.com/annam-nw/annam/x/bank/keeper"
+	custombank "github.com/anam-nw/anam/x/bank/keeper"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/bank"

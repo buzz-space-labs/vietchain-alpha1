@@ -3,8 +3,8 @@ package smartaccount
 import (
 	"math/rand"
 
-	smartaccountsimulation "github.com/annam-nw/annam/x/smartaccount/simulation"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	smartaccountsimulation "github.com/anam-nw/anam/x/smartaccount/simulation"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"

@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/annam-nw/annam/x/bank/types"
+	"github.com/anam-nw/anam/x/bank/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -11,7 +11,7 @@ import (
 type BaseKeeper struct {
 	keeper.BaseKeeper
 
-	annamKeeper types.AnnamKeeper
+	anamKeeper types.AnamKeeper
 }
 
 func NewBaseKeeper(
@@ -20,16 +20,16 @@ func NewBaseKeeper(
 	ak types.AccountKeeper,
 	blockedAddrs map[string]bool,
 	authority string,
-	annamKeeper types.AnnamKeeper,
+	anamKeeper types.AnamKeeper,
 ) BaseKeeper {
 	return BaseKeeper{
 		BaseKeeper: keeper.NewBaseKeeper(cdc, storeKey, ak, blockedAddrs, authority),
-		annamKeeper: annamKeeper,
+		anamKeeper: anamKeeper,
 	}
 }
 
 func (k BaseKeeper) GetExcludeCirculatingAmount(ctx sdk.Context, denom string) sdk.Coin {
-	excludeAddrs := k.annamKeeper.GetExcludeCirculatingAddr(ctx)
+	excludeAddrs := k.anamKeeper.GetExcludeCirculatingAddr(ctx)
 	excludeAmount := sdk.NewInt64Coin(denom, 0)
 	for _, addr := range excludeAddrs {
 		amount := k.BaseKeeper.GetBalance(ctx, addr, denom)

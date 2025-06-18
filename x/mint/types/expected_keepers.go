@@ -33,7 +33,7 @@ type BankKeeper interface {
 	GetExcludeCirculatingAmount(ctx sdk.Context, denom string) sdk.Coin
 }
 
-type AnnamKeeper interface {
+type AnamKeeper interface {
 	GetMaxSupply(ctx sdk.Context) string
 	GetExcludeCirculatingAddr(ctx sdk.Context) []sdk.AccAddress
 }

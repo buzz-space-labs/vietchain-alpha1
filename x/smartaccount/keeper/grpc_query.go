@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 )
 
 var _ types.QueryServer = Keeper{}

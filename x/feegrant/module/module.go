@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 
 	errorsmod "cosmossdk.io/errors"
-	customfeegrant "github.com/annam-nw/annam/x/feegrant"
-	customcli "github.com/annam-nw/annam/x/feegrant/cli"
+	customfeegrant "github.com/anam-nw/anam/x/feegrant"
+	customcli "github.com/anam-nw/anam/x/feegrant/cli"
 	abci "github.com/cometbft/cometbft/abci/types"
 	sdkclient "github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"

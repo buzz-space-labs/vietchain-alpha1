@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	helper "github.com/annam-nw/annam/tests/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	helper "github.com/anam-nw/anam/tests/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/stretchr/testify/require"
 )

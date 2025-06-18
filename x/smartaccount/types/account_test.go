@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/annam-nw/annam/app"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/app"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/stretchr/testify/require"
 )

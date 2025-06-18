@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/annam-nw/annam/app/params"
+	"github.com/anam-nw/anam/app/params"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/cosmos/cosmos-sdk/std"

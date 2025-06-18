@@ -2,7 +2,7 @@ package mint
 
 import (
 	"errors"
-	custommint "github.com/annam-nw/annam/x/mint/keeper"
+	custommint "github.com/anam-nw/anam/x/mint/keeper"
 	"time"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
@@ -24,7 +24,7 @@ func BeginBlocker(ctx sdk.Context, k custommint.Keeper) {
 	if !ok {
 		panic(errors.New("panic convert max supply string to bigInt"))
 	}
-	k.Logger(ctx).Debug("Get max supply from annam", "maxSupply", maxSupply.String())
+	k.Logger(ctx).Debug("Get max supply from anam", "maxSupply", maxSupply.String())
 	currentSupply := k.GetSupply(ctx, params.GetMintDenom())
 	k.Logger(ctx).Debug("Get current supply from network", "currentSupply", currentSupply.String())
 

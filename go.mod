@@ -1,4 +1,4 @@
-module github.com/annam-nw/annam
+module github.com/anam-nw/anam
 
 go 1.19
 

@@ -6,8 +6,8 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
-	sakeeper "github.com/annam-nw/annam/x/smartaccount/keeper"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	sakeeper "github.com/anam-nw/anam/x/smartaccount/keeper"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"

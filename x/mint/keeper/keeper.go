@@ -2,7 +2,7 @@ package keeper
 
 import (
 	"cosmossdk.io/math"
-	custommint "github.com/annam-nw/annam/x/mint/types"
+	custommint "github.com/anam-nw/anam/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -15,20 +15,20 @@ type Keeper struct {
 
 	bankKeeper    custommint.BankKeeper
 	stakingKeeper custommint.StakingKeeper
-	annamKeeper    custommint.AnnamKeeper
+	anamKeeper    custommint.AnamKeeper
 }
 
 // NewKeeper creates a new mint Keeper instance
 func NewKeeper(
 	cdc codec.BinaryCodec, key storetypes.StoreKey,
 	sk custommint.StakingKeeper, ak custommint.AccountKeeper, bk custommint.BankKeeper,
-	annamKeeper custommint.AnnamKeeper, feeCollectorName string, authority string,
+	anamKeeper custommint.AnamKeeper, feeCollectorName string, authority string,
 ) Keeper {
 	return Keeper{
 		Keeper:        mintkeeper.NewKeeper(cdc, key, sk, ak, bk, feeCollectorName, authority),
 		bankKeeper:    bk,
 		stakingKeeper: sk,
-		annamKeeper:    annamKeeper,
+		anamKeeper:    anamKeeper,
 	}
 }
 
@@ -37,15 +37,15 @@ func (k Keeper) GetSupply(ctx sdk.Context, denom string) math.Int {
 }
 
 func (k Keeper) GetMaxSupply(ctx sdk.Context) string {
-	return k.annamKeeper.GetMaxSupply(ctx)
+	return k.anamKeeper.GetMaxSupply(ctx)
 }
 
 //func (k Keeper) GetExcludeCirculatingAddr(ctx sdk.Context) []sdk.AccAddress {
-//	return k.annamKeeper.GetExcludeCirculatingAddr(ctx)
+//	return k.anamKeeper.GetExcludeCirculatingAddr(ctx)
 //}
 
 //func (k Keeper) GetExcludeCirculatingAmount(ctx sdk.Context, denom string) sdk.Coin {
-//	excludeAddrs := k.annamKeeper.GetExcludeCirculatingAddr(ctx)
+//	excludeAddrs := k.anamKeeper.GetExcludeCirculatingAddr(ctx)
 //	excludeAmount := sdk.NewInt64Coin(denom, 0)
 //	for _, addr := range excludeAddrs {
 //		k.Logger(ctx).Info("GetExcludeCirculatingAmount", "addr", addr.String())

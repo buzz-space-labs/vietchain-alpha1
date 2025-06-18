@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	customfeegrant "github.com/annam-nw/annam/x/feegrant"
+	customfeegrant "github.com/anam-nw/anam/x/feegrant"
 
 	"github.com/spf13/cobra"
 

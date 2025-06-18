@@ -1,7 +1,7 @@
 package mint
 
 import (
-	custommint "github.com/annam-nw/annam/x/mint/keeper"
+	custommint "github.com/anam-nw/anam/x/mint/keeper"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

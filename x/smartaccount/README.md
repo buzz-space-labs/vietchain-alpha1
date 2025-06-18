@@ -312,7 +312,7 @@ struct PreExecute {
         // etc.
         //  MsgData {
         //      type_url: "/cosmos.bank.v1beta1.MsgSend",
-        //      value: "{fromAddress:\"annam172r4c7mng5y6ccfqp5klwyulshx6dh2mmd2r0xnmsgugaa754kws8u96pq\",toAddress:\"annam1y3u4ht0p69gz757myr3l0fttchhw3fj2gpeznd\",amount:[{denom:\"uannam\",amount:\"200\"}]}"
+        //      value: "{fromAddress:\"anam172r4c7mng5y6ccfqp5klwyulshx6dh2mmd2r0xnmsgugaa754kws8u96pq\",toAddress:\"anam1y3u4ht0p69gz757myr3l0fttchhw3fj2gpeznd\",amount:[{denom:\"uanam\",amount:\"200\"}]}"
         //  }
     }
     ```
@@ -331,7 +331,7 @@ struct Recover {
 [smart account samples][2]
 
 [1]: https://cosmwasm.com/
-[2]: https://github.com/annam-nw/smart-account-sample/
+[2]: https://github.com/anam-nw/smart-account-sample/
 [3]: https://github.com/CosmWasm/wasmd/blob/main/x/wasm/keeper/msg_server.go#L79-L110
-[4]: https://annam-network.notion.site/Smart-Account-e69e51d6449b46dcb7c157a325dfb44f
+[4]: https://anam-network.notion.site/Smart-Account-e69e51d6449b46dcb7c157a325dfb44f
 [5]: https://github.com/cosmos/cosmos-sdk/blob/main/x/auth/types/account.go

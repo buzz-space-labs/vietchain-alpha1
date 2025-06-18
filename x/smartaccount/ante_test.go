@@ -6,12 +6,12 @@ import (
 	"github.com/stretchr/testify/require"
 
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
-	tests "github.com/annam-nw/annam/tests"
-	"github.com/annam-nw/annam/x/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount/keeper"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	tests "github.com/anam-nw/anam/tests"
+	"github.com/anam-nw/anam/x/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount/keeper"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 
-	helper "github.com/annam-nw/annam/tests/smartaccount"
+	helper "github.com/anam-nw/anam/tests/smartaccount"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"

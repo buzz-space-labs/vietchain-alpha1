@@ -28,7 +28,7 @@ type AccountKeeper interface {
 	SetModuleAccount(ctx sdk.Context, macc types.ModuleAccountI)
 }
 
-type AnnamKeeper interface {
+type AnamKeeper interface {
 	GetMaxSupply(ctx sdk.Context) string
 	GetExcludeCirculatingAddr(ctx sdk.Context) []sdk.AccAddress
 }

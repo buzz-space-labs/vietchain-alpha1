@@ -5,8 +5,8 @@ import (
 
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	wasmTypes "github.com/CosmWasm/wasmd/x/wasm/types"
-	smartaccount "github.com/annam-nw/annam/x/smartaccount"
-	smartaccountkeeper "github.com/annam-nw/annam/x/smartaccount/keeper"
+	smartaccount "github.com/anam-nw/anam/x/smartaccount"
+	smartaccountkeeper "github.com/anam-nw/anam/x/smartaccount/keeper"
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"

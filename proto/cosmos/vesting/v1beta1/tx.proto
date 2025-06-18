@@ -7,11 +7,11 @@
 //import "cosmos/vesting/v1beta1/vesting.proto";
 //import "cosmos/vesting/v1beta1/tx.proto";
 //
-//option go_package = "github.com/annam-nw/annam/x/auth/vesting/types";
+//option go_package = "github.com/anam-nw/anam/x/auth/vesting/types";
 //
 //// Msg defines the bank Msg service.
 //service MsgExtend {
-//  // annam move from cosmos-sdk 0.46
+//  // anam move from cosmos-sdk 0.46
 //  rpc CreatePeriodicVestingAccount(MsgCreatePeriodicVestingAccount) returns (MsgCreatePeriodicVestingAccountResponse);
 //}
 //

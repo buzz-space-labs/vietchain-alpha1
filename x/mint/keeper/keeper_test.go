@@ -4,11 +4,11 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
-	"github.com/annam-nw/annam/tests"
+	"github.com/anam-nw/anam/tests"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 
-	"github.com/annam-nw/annam/x/mint/keeper"
-	minttestutil "github.com/annam-nw/annam/x/mint/testutil"
+	"github.com/anam-nw/anam/x/mint/keeper"
+	minttestutil "github.com/anam-nw/anam/x/mint/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authTypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	mint "github.com/cosmos/cosmos-sdk/x/mint"
@@ -26,7 +26,7 @@ type KeeperTestSuite struct {
 	stakingKeeper *minttestutil.MockStakingKeeper
 	bankKeeper    *minttestutil.MockBankKeeper
 	accountKeeper *minttestutil.MockAccountKeeper
-	annamKeeper    *minttestutil.MockannamKeeper
+	anamKeeper    *minttestutil.MockanamKeeper
 	pk            paramskeeper.Keeper
 }
 
@@ -42,7 +42,7 @@ func (s *KeeperTestSuite) SetupTest() {
 	accountKeeper := minttestutil.NewMockAccountKeeper(ctrl)
 	bankKeeper := minttestutil.NewMockBankKeeper(ctrl)
 	stakingKeeper := minttestutil.NewMockStakingKeeper(ctrl)
-	annamKeeper := minttestutil.NewMockannamKeeper(ctrl)
+	anamKeeper := minttestutil.NewMockanamKeeper(ctrl)
 	pk := tests.GetParamsKeeper()
 
 	accountKeeper.EXPECT().GetModuleAddress(minttypes.ModuleName).Return(sdk.AccAddress{})
@@ -50,12 +50,12 @@ func (s *KeeperTestSuite) SetupTest() {
 	feeCollector := authTypes.FeeCollectorName
 	authority := "" // Need review
 
-	s.mintKeeper = keeper.NewKeeper(encCfg.Codec, key, stakingKeeper, accountKeeper, bankKeeper, annamKeeper, feeCollector, authority)
+	s.mintKeeper = keeper.NewKeeper(encCfg.Codec, key, stakingKeeper, accountKeeper, bankKeeper, anamKeeper, feeCollector, authority)
 
 	s.stakingKeeper = stakingKeeper
 	s.bankKeeper = bankKeeper
 	s.accountKeeper = accountKeeper
-	s.annamKeeper = annamKeeper
+	s.anamKeeper = anamKeeper
 	s.pk = pk
 }
 
@@ -72,7 +72,7 @@ func (s *KeeperTestSuite) TestCustomStakingTokenSupply() {
 }
 
 func (s *KeeperTestSuite) TestMintCoins() {
-	coins := sdk.NewCoins(sdk.NewCoin("uannam", sdk.NewInt(1000000)))
+	coins := sdk.NewCoins(sdk.NewCoin("uanam", sdk.NewInt(1000000)))
 	s.bankKeeper.EXPECT().MintCoins(s.ctx, minttypes.ModuleName, coins).Return(nil)
 	s.Require().Equal(s.mintKeeper.MintCoins(s.ctx, sdk.NewCoins()), nil)
 	s.Require().Nil(s.mintKeeper.MintCoins(s.ctx, coins))

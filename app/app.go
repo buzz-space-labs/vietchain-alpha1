@@ -7,16 +7,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	appparams "github.com/annam-nw/annam/app/params"
+	appparams "github.com/anam-nw/anam/app/params"
 
-	"github.com/annam-nw/annam/app/internal"
+	"github.com/anam-nw/anam/app/internal"
 
-	"github.com/annam-nw/annam/app/utils"
-	custombank "github.com/annam-nw/annam/x/bank"
-	custombankkeeper "github.com/annam-nw/annam/x/bank/keeper"
-	customfeegrantmodule "github.com/annam-nw/annam/x/feegrant/module"
-	custommint "github.com/annam-nw/annam/x/mint"
-	custommintkeeper "github.com/annam-nw/annam/x/mint/keeper"
+	"github.com/anam-nw/anam/app/utils"
+	custombank "github.com/anam-nw/anam/x/bank"
+	custombankkeeper "github.com/anam-nw/anam/x/bank/keeper"
+	customfeegrantmodule "github.com/anam-nw/anam/x/feegrant/module"
+	custommint "github.com/anam-nw/anam/x/mint"
+	custommintkeeper "github.com/anam-nw/anam/x/mint/keeper"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
@@ -103,15 +103,15 @@ import (
 	consensusparamkeeper "github.com/cosmos/cosmos-sdk/x/consensus/keeper"
 	consensusparamtypes "github.com/cosmos/cosmos-sdk/x/consensus/types"
 
-	"github.com/annam-nw/annam/docs"
+	"github.com/anam-nw/anam/docs"
 
-	annammodule "github.com/annam-nw/annam/x/annam"
-	annammodulekeeper "github.com/annam-nw/annam/x/annam/keeper"
-	annammoduletypes "github.com/annam-nw/annam/x/annam/types"
+	anammodule "github.com/anam-nw/anam/x/anam"
+	anammodulekeeper "github.com/anam-nw/anam/x/anam/keeper"
+	anammoduletypes "github.com/anam-nw/anam/x/anam/types"
 
-	samodule "github.com/annam-nw/annam/x/smartaccount"
-	samodulekeeper "github.com/annam-nw/annam/x/smartaccount/keeper"
-	samoduletypes "github.com/annam-nw/annam/x/smartaccount/types"
+	samodule "github.com/anam-nw/anam/x/smartaccount"
+	samodulekeeper "github.com/anam-nw/anam/x/smartaccount/keeper"
+	samoduletypes "github.com/anam-nw/anam/x/smartaccount/types"
 
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
@@ -131,8 +131,8 @@ import (
 )
 
 const (
-	AccountAddressPrefix = "annam"
-	Name                 = "annam"
+	AccountAddressPrefix = "anam"
+	Name                 = "anam"
 )
 
 // this line is used by starport scaffolding # stargate/wasm/app/enabledProposals
@@ -217,7 +217,7 @@ var (
 		evidence.AppModuleBasic{},
 		transfer.AppModuleBasic{},
 		authvesting.AppModuleBasic{},
-		annammodule.AppModuleBasic{},
+		anammodule.AppModuleBasic{},
 		samodule.AppModuleBasic{},
 		wasm.AppModuleBasic{},
 		// this line is used by starport scaffolding # stargate/app/moduleBasic
@@ -295,7 +295,7 @@ type App struct {
 	ScopedTransferKeeper capabilitykeeper.ScopedKeeper
 	ScopedWasmKeeper     capabilitykeeper.ScopedKeeper
 
-	annamKeeper annammodulekeeper.Keeper
+	anamKeeper anammodulekeeper.Keeper
 
 	SaKeeper samodulekeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
@@ -336,7 +336,7 @@ func New(
 		minttypes.StoreKey, distrtypes.StoreKey, slashingtypes.StoreKey, crisistypes.StoreKey,
 		govtypes.StoreKey, paramstypes.StoreKey, consensusparamtypes.StoreKey, ibcexported.StoreKey, upgradetypes.StoreKey, feegrant.StoreKey,
 		evidencetypes.StoreKey, ibctransfertypes.StoreKey, capabilitytypes.StoreKey,
-		annammoduletypes.StoreKey,
+		anammoduletypes.StoreKey,
 		samoduletypes.StoreKey,
 		authzkeeper.StoreKey,
 		wasmtypes.StoreKey,
@@ -379,15 +379,15 @@ func New(
 		govModAddress,
 	)
 
-	app.annamKeeper = annammodulekeeper.NewKeeper(
+	app.anamKeeper = anammodulekeeper.NewKeeper(
 		appCodec,
-		keys[annammoduletypes.StoreKey],
-		keys[annammoduletypes.MemStoreKey],
-		app.GetSubspace(annammoduletypes.ModuleName),
+		keys[anammoduletypes.StoreKey],
+		keys[anammoduletypes.MemStoreKey],
+		app.GetSubspace(anammoduletypes.ModuleName),
 	)
 
 	app.BankKeeper = custombankkeeper.NewBaseKeeper(
-		appCodec, keys[banktypes.StoreKey], app.AccountKeeper, internal.MergeExcludeAddrs(app.ModuleAccountAddrs()), govModAddress, app.annamKeeper,
+		appCodec, keys[banktypes.StoreKey], app.AccountKeeper, internal.MergeExcludeAddrs(app.ModuleAccountAddrs()), govModAddress, app.anamKeeper,
 	)
 	stakingKeeper := stakingkeeper.NewKeeper(
 		appCodec, keys[stakingtypes.StoreKey], app.AccountKeeper, app.BankKeeper, govModAddress,
@@ -395,7 +395,7 @@ func New(
 
 	app.MintKeeper = custommintkeeper.NewKeeper(
 		appCodec, keys[minttypes.StoreKey], stakingKeeper,
-		app.AccountKeeper, app.BankKeeper, app.annamKeeper, authtypes.FeeCollectorName,
+		app.AccountKeeper, app.BankKeeper, app.anamKeeper, authtypes.FeeCollectorName,
 		govModAddress,
 	)
 	app.DistrKeeper = distrkeeper.NewKeeper(
@@ -460,7 +460,7 @@ func New(
 	// If evidence needs to be handled for the app, set routes in router here and seal
 	app.EvidenceKeeper = *evidenceKeeper
 
-	annamModule := annammodule.NewAppModule(appCodec, app.annamKeeper)
+	anamModule := anammodule.NewAppModule(appCodec, app.anamKeeper)
 	// this line is used by starport scaffolding # stargate/app/keeperDefinition
 
 	// Create static IBC router, add transfer route, then set and seal it
@@ -563,7 +563,7 @@ func New(
 		ibc.NewAppModule(app.IBCKeeper),
 		params.NewAppModule(app.ParamsKeeper),
 		transferModule,
-		annamModule,
+		anamModule,
 		saModule,
 		wasm.NewAppModule(appCodec, &app.WasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper, app.MsgServiceRouter(), app.GetSubspace(wasmtypes.ModuleName)),
 		// this line is used by starport scaffolding # stargate/app/appModule
@@ -594,7 +594,7 @@ func New(
 		// additional non simd modules
 		ibcexported.ModuleName,
 		ibctransfertypes.ModuleName,
-		annammoduletypes.ModuleName,
+		anammoduletypes.ModuleName,
 		wasmtypes.ModuleName,
 		samoduletypes.ModuleName,
 	)
@@ -620,7 +620,7 @@ func New(
 		// additional non simd modules
 		ibcexported.ModuleName,
 		ibctransfertypes.ModuleName,
-		annammoduletypes.ModuleName,
+		anammoduletypes.ModuleName,
 		wasmtypes.ModuleName,
 		samoduletypes.ModuleName,
 	)
@@ -644,7 +644,7 @@ func New(
 		genutiltypes.ModuleName,
 		evidencetypes.ModuleName,
 		ibctransfertypes.ModuleName,
-		annammoduletypes.ModuleName,
+		anammoduletypes.ModuleName,
 		feegrant.ModuleName,
 		authz.ModuleName,
 		paramstypes.ModuleName,
@@ -658,7 +658,7 @@ func New(
 
 	app.mm.SetOrderMigrations(
 		authtypes.ModuleName,
-		annammoduletypes.ModuleName,
+		anammoduletypes.ModuleName,
 		banktypes.ModuleName,
 		capabilitytypes.ModuleName,
 		distrtypes.ModuleName,
@@ -937,7 +937,7 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	paramsKeeper.Subspace(crisistypes.ModuleName)
 	paramsKeeper.Subspace(ibctransfertypes.ModuleName)
 	paramsKeeper.Subspace(ibcexported.ModuleName)
-	paramsKeeper.Subspace(annammoduletypes.ModuleName)
+	paramsKeeper.Subspace(anammoduletypes.ModuleName)
 	paramsKeeper.Subspace(samoduletypes.ModuleName)
 	paramsKeeper.Subspace(wasmtypes.ModuleName)
 	// this line is used by starport scaffolding # stargate/app/paramSubspace

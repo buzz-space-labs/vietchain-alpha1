@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	helper "github.com/annam-nw/annam/tests/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount"
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	helper "github.com/anam-nw/anam/tests/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 )
 
 var (

@@ -6,39 +6,39 @@ import (
 )
 
 const (
-	annamExponent = 6
-	BaseCoinUnit = "uannam"
+	anamExponent = 6
+	BaseCoinUnit = "uanam"
 )
 
 var (
-	// DevnetChainID defines the annam chain ID for devnet
-	DevnetChainID = "annam-testnet"
+	// DevnetChainID defines the anam chain ID for devnet
+	DevnetChainID = "anam-testnet"
 
-	// SerenityChainID defines the annam chain ID for serenity testnet
+	// SerenityChainID defines the anam chain ID for serenity testnet
 	SerenityChainID = "serenity-testnet"
 
-	// EuphoriaChainID defines the annam chain ID for euphoria testnet
+	// EuphoriaChainID defines the anam chain ID for euphoria testnet
 	EuphoriaChainID = "euphoria"
 )
 
-// IsDevnet returns true if the chain-id has the annam devnet chain prefix.
+// IsDevnet returns true if the chain-id has the anam devnet chain prefix.
 func IsDevnet(chainID string) bool {
 	return strings.HasPrefix(chainID, DevnetChainID)
 }
 
-// IsSerenity returns true if the chain-id has the annam serenity network chain prefix.
+// IsSerenity returns true if the chain-id has the anam serenity network chain prefix.
 func IsSerenity(chainID string) bool {
 	return strings.HasPrefix(chainID, SerenityChainID)
 }
 
-// IsEuphoria returns true if the chain-id has the annam euphoria network chain prefix.
+// IsEuphoria returns true if the chain-id has the anam euphoria network chain prefix.
 func IsEuphoria(chainID string) bool {
 	return strings.HasPrefix(chainID, EuphoriaChainID)
 }
 
 // RegisterDenoms registers token denoms.
 func RegisterDenoms() {
-	err := sdk.RegisterDenom(BaseCoinUnit, sdk.NewDecWithPrec(1, annamExponent))
+	err := sdk.RegisterDenom(BaseCoinUnit, sdk.NewDecWithPrec(1, anamExponent))
 	if err != nil {
 		panic(err)
 	}

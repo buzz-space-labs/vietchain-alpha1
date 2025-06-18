@@ -49,8 +49,8 @@ WHITESPACE := $(subst ,, )
 COMMA := ,
 BUILD_TAGS_COMMA_SEP := $(subst $(WHITESPACE),$(COMMA),$(BUILD_TAGS))
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=annam \
-	-X github.com/cosmos/cosmos-sdk/version.AppName=annamd \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=anam \
+	-X github.com/cosmos/cosmos-sdk/version.AppName=anamd \
 	-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 	-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 	-X github.com/tendermint/tendermint/version.TMCoreSemVer=$(TM_VERSION) \
@@ -61,13 +61,13 @@ BUILD_FLAGS := -tags "$(BUILD_TAGS)" -ldflags '$(ldflags)' -trimpath
 all: build install
 
 install: go.sum
-	@echo "--> Installing annamd"
-	@echo "go install -mod=readonly $(BUILD_FLAGS) ./cmd/annamd"
-	@go install -mod=readonly $(BUILD_FLAGS) ./cmd/annamd
+	@echo "--> Installing anamd"
+	@echo "go install -mod=readonly $(BUILD_FLAGS) ./cmd/anamd"
+	@go install -mod=readonly $(BUILD_FLAGS) ./cmd/anamd
 
 build: go.sum
-	@echo "--> Build annamd"
-	@go build -mod=readonly $(BUILD_FLAGS) -o ./build/annamd ./cmd/annamd
+	@echo "--> Build anamd"
+	@go build -mod=readonly $(BUILD_FLAGS) -o ./build/anamd ./cmd/anamd
 
 go.sum: go.mod
 	@echo "--> Ensure dependencies have not been modified"

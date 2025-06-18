@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	tests "github.com/annam-nw/annam/tests"
+	tests "github.com/anam-nw/anam/tests"
 	"github.com/cosmos/cosmos-sdk/crypto/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	mockChainID = "annam-testnet"
+	mockChainID = "anam-testnet"
 	signMode    = signing.SignMode_SIGN_MODE_DIRECT
 )
 

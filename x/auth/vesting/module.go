@@ -2,8 +2,8 @@ package vesting
 
 import (
 	"encoding/json"
-	"github.com/annam-nw/annam/x/auth/vesting/client/cli"
-	"github.com/annam-nw/annam/x/auth/vesting/types"
+	"github.com/anam-nw/anam/x/auth/vesting/client/cli"
+	"github.com/anam-nw/anam/x/auth/vesting/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"

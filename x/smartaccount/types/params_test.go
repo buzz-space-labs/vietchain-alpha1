@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/annam-nw/annam/x/smartaccount/types"
+	"github.com/anam-nw/anam/x/smartaccount/types"
 )
 
 func TestValidateParams(t *testing.T) {

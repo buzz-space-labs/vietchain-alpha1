@@ -247,31 +247,31 @@ func (mr *MockBankKeeperMockRecorder) SendCoinsFromModuleToModule(ctx, senderMod
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCoinsFromModuleToModule", reflect.TypeOf((*MockBankKeeper)(nil).SendCoinsFromModuleToModule), ctx, senderModule, recipientModule, amt)
 }
 
-// MockannamKeeper is a mock of annamKeeper interface.
-type MockannamKeeper struct {
+// MockanamKeeper is a mock of anamKeeper interface.
+type MockanamKeeper struct {
 	ctrl     *gomock.Controller
-	recorder *MockannamKeeperMockRecorder
+	recorder *MockanamKeeperMockRecorder
 }
 
-// MockannamKeeperMockRecorder is the mock recorder for MockannamKeeper.
-type MockannamKeeperMockRecorder struct {
-	mock *MockannamKeeper
+// MockanamKeeperMockRecorder is the mock recorder for MockanamKeeper.
+type MockanamKeeperMockRecorder struct {
+	mock *MockanamKeeper
 }
 
-// NewMockannamKeeper creates a new mock instance.
-func NewMockannamKeeper(ctrl *gomock.Controller) *MockannamKeeper {
-	mock := &MockannamKeeper{ctrl: ctrl}
-	mock.recorder = &MockannamKeeperMockRecorder{mock}
+// NewMockanamKeeper creates a new mock instance.
+func NewMockanamKeeper(ctrl *gomock.Controller) *MockanamKeeper {
+	mock := &MockanamKeeper{ctrl: ctrl}
+	mock.recorder = &MockanamKeeperMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
-func (m *MockannamKeeper) EXPECT() *MockannamKeeperMockRecorder {
+func (m *MockanamKeeper) EXPECT() *MockanamKeeperMockRecorder {
 	return m.recorder
 }
 
 // GetExcludeCirculatingAddr mocks base method.
-func (m *MockannamKeeper) GetExcludeCirculatingAddr(ctx types.Context) []types.AccAddress {
+func (m *MockanamKeeper) GetExcludeCirculatingAddr(ctx types.Context) []types.AccAddress {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetExcludeCirculatingAddr", ctx)
 	ret0, _ := ret[0].([]types.AccAddress)
@@ -279,13 +279,13 @@ func (m *MockannamKeeper) GetExcludeCirculatingAddr(ctx types.Context) []types.A
 }
 
 // GetExcludeCirculatingAddr indicates an expected call of GetExcludeCirculatingAddr.
-func (mr *MockannamKeeperMockRecorder) GetExcludeCirculatingAddr(ctx interface{}) *gomock.Call {
+func (mr *MockanamKeeperMockRecorder) GetExcludeCirculatingAddr(ctx interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExcludeCirculatingAddr", reflect.TypeOf((*MockannamKeeper)(nil).GetExcludeCirculatingAddr), ctx)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExcludeCirculatingAddr", reflect.TypeOf((*MockanamKeeper)(nil).GetExcludeCirculatingAddr), ctx)
 }
 
 // GetMaxSupply mocks base method.
-func (m *MockannamKeeper) GetMaxSupply(ctx types.Context) string {
+func (m *MockanamKeeper) GetMaxSupply(ctx types.Context) string {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMaxSupply", ctx)
 	ret0, _ := ret[0].(string)
@@ -293,7 +293,7 @@ func (m *MockannamKeeper) GetMaxSupply(ctx types.Context) string {
 }
 
 // GetMaxSupply indicates an expected call of GetMaxSupply.
-func (mr *MockannamKeeperMockRecorder) GetMaxSupply(ctx interface{}) *gomock.Call {
+func (mr *MockanamKeeperMockRecorder) GetMaxSupply(ctx interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMaxSupply", reflect.TypeOf((*MockannamKeeper)(nil).GetMaxSupply), ctx)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMaxSupply", reflect.TypeOf((*MockanamKeeper)(nil).GetMaxSupply), ctx)
 }
