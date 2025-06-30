@@ -1,0 +1,14 @@
+syntax = "proto3";
+package anam.anam;
+
+// this line is used by starport scaffolding # genesis/proto/import
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/anam-nw/anam/x/anam/types";
+
+// Params defines the parameters for the anam module.
+message Params {
+  // max_supply defines the max supply of anam coin.
+  string max_supply = 1 [(gogoproto.moretags) = "yaml:\"max_supply\""];
+  repeated string exclude_circulating_addr = 2 [(gogoproto.moretags) = "yaml:\"exclude_circulating_addr\""];
+}

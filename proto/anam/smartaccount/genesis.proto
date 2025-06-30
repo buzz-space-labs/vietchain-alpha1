@@ -1,0 +1,15 @@
+syntax = "proto3";
+package anam.smartaccount;
+
+import "gogoproto/gogo.proto";
+import "anam/smartaccount/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/anam-nw/anam/x/smartaccount/types";
+
+// GenesisState defines the smartaccount module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+  uint64 smart_account_id = 2;
+}
