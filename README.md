@@ -154,3 +154,8 @@ anamd tx bank send alice <recipient-address> 1000000uanam \
   --keyring-backend test \
   --node <anam-chain-rpc>
 ```
+
+---
+
+This setup guide was adapted from the [Aurad project](https://github.com/aura-nw/aura), licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+Copyright © 2023 Cosmos Contributors.
