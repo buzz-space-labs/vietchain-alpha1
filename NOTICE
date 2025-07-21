@@ -1,0 +1,11 @@
+Project: Anamd CLI Setup
+Copyright: © 2025 Buzz Space Labs
+
+Includes code or documentation adapted from:
+- Aurad (https://github.com/aura-nw/aura)
+  Licensed under Apache License, Version 2.0
+
+Modifications:
+- Reformatted README.md for Anamd Guild Testing
+- Modified configuration specific to own business purpose
+- Removed unused component
